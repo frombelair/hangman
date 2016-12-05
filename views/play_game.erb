@@ -1,0 +1,12 @@
+<center>
+ Your secret word is <%= session[:blank_word] %>.
+<br>
+<br>
+Guessed Letters [<%=@guessed_letters%>]<br><br>
+Choose a letter!
+<br>
+<br>
+<form method="post" action="letter_guess">
+	<input type="text" name="letter_guess" pattern="[A-Za-z]" maxlength="1" autofocus="autofocus" required>
+	<input type="submit">
+</form>
